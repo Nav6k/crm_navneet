@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <div class="customer-detail-box">
+      <h1>FIND YOUR CUSTOMER</h1>
+      <div class="search-box">
+        <div class="input-wrapper">
+          <input placeholder="Type phone name, number or email" type="text" />
+          <button>Search</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <div class="customer-detail-box">
+      <h1>FIND YOUR CUSTOMER</h1>
+      <div class="search-box">
+        <div class="input-wrapper">
+          <input
+            id="searchInput"
+            placeholder="Type phone name, number or email"
+            type="text"
+          />
+          <button onclick="validateInput()">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function validateInput() {
+        var input = document.getElementById("searchInput").value;
+        if (input.includes("@") && /\d{10}/.test(input)) {
+          alert("Validation Successful!");
+          // Proceed with search or other actions here
+        } else {
+          alert(
+            "Please enter a valid email containing '@' and a 10-digit number."
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
